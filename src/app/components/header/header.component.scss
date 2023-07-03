@@ -1,4 +1,4 @@
-.header_wrapper {
+.header__wrapper {
     display: grid;
     font-family: 'Poppins', sans-serif;
     grid-template-rows: 15vh min-content;
@@ -10,7 +10,7 @@
         [padding-end] 9.4rem;
 }
 
-.header_logo {
+.header__logo {
     grid-column: logo / empty-space;
     display: flex;
     flex-direction: row;
@@ -31,7 +31,7 @@
     }
 }
 
-.header_menu-wrapper {
+.header__menu-wrapper {
     grid-column: menu / padding-end;
     background-color: #ffa3a3;
     border-radius: 2.7rem;
