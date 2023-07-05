@@ -1,0 +1,18 @@
+<ng-container *ngIf="review">
+    <div class="card__wrapper">
+        <div class="card">
+            <div class="card__header">
+                <img alt="{{ review.name }}" [src]="review.photo" />
+                <ul *ngFor="let x of review.rating | toArray" class="card__rating">
+                    <li>
+                        <span value="x" class="material-symbols-outlined">star</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card__content">
+                <h2>{{ review.name }}</h2>
+                <p>{{ review.review }}</p>
+            </div>
+        </div>
+    </div>
+</ng-container>
