@@ -1,0 +1,83 @@
+.footer__wrapper {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    grid-template-rows: 30vh max-content;
+    grid-template-columns:
+        [padding-start] 9.4rem
+        [logo] minmax(10rem, 1fr)
+        [empty-space] 3rem
+        [links] minmax(12rem, 1.5fr)
+        [padding-end] 9.4rem;
+    place-items: center;
+    color: #212529;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #eff0f1;
+    padding: 4rem;
+}
+
+.footer__contact {
+    grid-column: logo / empty-space;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    img {
+        height: 7rem;
+        width: 9.5rem;
+        object-fit: fill;
+    }
+}
+
+.footer {
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+        svg {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    &__logo {
+        p {
+            max-width: 20rem;
+        }
+    }
+}
+
+.footer__accordeon {
+    &-wrapper {
+        grid-column: links / padding-end;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10rem;
+    }
+
+    &-title {
+        font-family: Playfair Display;
+        font-size: 1.875rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-align: start;
+        padding-left: 1.5rem;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+        margin: 1.8rem;
+        color: #212529;
+        font-weight: 600;
+    }
+}
