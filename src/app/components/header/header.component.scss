@@ -4,14 +4,14 @@
     grid-template-rows: 15vh min-content;
     grid-template-columns:
         [padding-start] 9.4rem
-        [logo] minmax(12rem, 1fr)
+        [logo] minmax(3rem, 0.5fr)
         [empty-space] 3rem
         [menu] minmax(6rem, 1fr)
         [padding-end] 9.4rem;
 }
 
 .header__logo {
-    grid-column: logo / empty-space;
+    grid-column: padding-start / empty-space;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -36,7 +36,7 @@
     background-color: #ffa3a3;
     border-radius: 2.7rem;
     height: 7.5rem;
-    width: 59rem;
+    max-width: 59rem;
     margin: auto 0;
 }
 
@@ -45,6 +45,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 4rem;
+    // gap: minmax(1rem, 4rem);
     align-items: center;
     height: 100%;
     margin: 0;

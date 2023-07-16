@@ -1,0 +1,24 @@
+<ng-container *ngIf="images as images">
+    <div
+        *appCarousel="let image of images; let next = next; let back = back"
+        class="roundCarousel__wrapper"
+    >
+        <button class="button" (click)="back()">
+            <svg class="left">
+                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
+            </svg>
+        </button>
+
+        <p class="roundCarousel__description">{{ image.desc }}</p>
+
+        <!-- <div class="roundCarousel__product-wrapper"> -->
+        <div id="slider" class="slider"></div>
+        <img alt="Product photo" class="roundCarousel__product" [@div] [src]="image.url" />
+        <!-- </div> -->
+        <button class="button" (click)="next()">
+            <svg class="right">
+                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
+            </svg>
+        </button>
+    </div>
+</ng-container>
