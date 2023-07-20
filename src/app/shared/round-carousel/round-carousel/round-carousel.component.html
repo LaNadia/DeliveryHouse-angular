@@ -12,13 +12,56 @@
         <p class="roundCarousel__description">{{ image.desc }}</p>
 
         <!-- <div class="roundCarousel__product-wrapper"> -->
-        <div id="slider" class="slider"></div>
+        <!-- <div id="slider" class="slider"></div> -->
+
+        <div #container class="container">
+            <div #wrapper class="wrapper">
+                <div class="item 1 active">1</div>
+                <div class="item 2">2</div>
+                <div class="item 3">3</div>
+                <div class="item 4">4</div>
+                <div class="item 5">5</div>
+                <div class="item 6">6</div>
+                <div class="item 7">7</div>
+                <div class="item 8">8</div>
+                <svg #svg viewBox="0 0 300 300">
+                    <circle #holder cx="151" cy="151" r="150" class="st0" />
+                </svg>
+            </div>
+            <div class="start">&#8592; Active</div>
+        </div>
+        <div style="text-align: center" class="container">
+            <button #prev>Prev</button>
+            <button #next>Next</button>
+        </div>
+
         <img alt="Product photo" class="roundCarousel__product" [@div] [src]="image.url" />
         <!-- </div> -->
         <button class="button" (click)="next()">
-            <svg class="right">
+            <svg class="right svg">
                 <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
             </svg>
         </button>
     </div>
 </ng-container>
+<!-- 
+<div #container class="container">
+    <div #wrapper class="wrapper">
+      <div class="item 1 active">1</div>
+      <div class="item 2">2</div>
+      <div class="item 3">3</div>
+      <div class="item 4">4</div>
+      <div class="item 5">5</div>
+      <div class="item 6">6</div>
+      <div class="item 7">7</div>
+      <div class="item 8">8</div>
+      <svg #svg viewBox="0 0 300 300">
+        <circle #holder class="st0" cx="151" cy="151" r="150"/>
+      </svg>
+    </div>
+    <div class="start">&#8592; Active</div>
+  </div>
+  <div class="container" style="text-align: center;">
+    <button #prev>Prev</button>
+    <button #next>Next</button>
+  </div> -->
