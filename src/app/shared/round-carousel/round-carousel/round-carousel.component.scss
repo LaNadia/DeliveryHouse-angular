@@ -4,12 +4,43 @@
         font-family: 'Poppins', sans-serif;
         grid-template-rows: repeat(9, 9.44vh);
         grid-template-columns: [arrow-left] 25rem [empty-space1] 3rem [img] minmax(12rem, 1fr) [empty-space2] 3rem [arrow-right] 25rem;
-        background: url('../../../../assets/images//bg-table.jpg');
+        //  background: url('../../../../assets/images//bg-table.jpg');
+        // background-image: var(--bg);
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // animation: fade 3s forwards;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        background-image: var(--bg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        overflow: hidden;
+        animation: fade 0.8s forwards;
     }
+    // &__wrapper::before {
+    //     animation: fade 3s forwards;
+    //     content: ' ';
+    //     display: block;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     // opacity: 0.6;
+    //   //  transition:  opacity 3s ease-out;
+    //     background-image: var(--bg);
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    // }
 
     &__description {
         max-width: 40rem;
@@ -26,8 +57,21 @@
         margin: 0 auto;
     }
 }
+@keyframes fade {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .roundCarousel__product {
+    position: relative;
+    z-index: 1;
     grid-column: empty-space1 / empty-space2;
     grid-row: 4;
     min-height: 100vh;
@@ -56,6 +100,8 @@
 // }
 
 .button {
+    position: relative;
+    z-index: 1;
     background-color: transparent;
 }
 
@@ -65,16 +111,21 @@ svg {
 }
 
 .left {
-    position: absolute;
-    top: 85%;
-    left: 5%;
+    //     position: relative;
+    // z-index: 1;
+    // position: absolute;
+    // top: 85%;
+    // left: 5%;
     grid-column: arrow-left;
 }
 
 .right {
-    position: absolute;
-    top: 85%;
-    left: 90%;
+    // position: relative;
+    // z-index: 1;
+    top: 0;
+    // position: absolute;
+    // top: 85%;
+    // left: 90%;
     grid-column: arrow-right;
 }
 
@@ -107,8 +158,10 @@ svg {
 }
 
 .roundCarousel__product-wrapper {
-    position: relative;
-    grid-column: empty-space1 / empty-space2;
+    //  position: relative;
+    // grid-column: empty-space1 / empty-space2;
+
+    //position: absolute;
 
     min-height: 100vh;
     margin: 30% 1rem;
@@ -123,24 +176,30 @@ svg {
 
 .wrapper {
     position: relative;
+
+    top: 1300%;
+    left: 250%;
+    // grid-column: empty-space1 / empty-space2;
+    // grid-row: 4;
+    // min-height: 100vh;
 }
 
-.item {
-    width: 50px;
-    height: 50px;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 100%;
-    background-color: red;
-    z-index: 1;
-}
+// .item {
+//    width: 50px;
+//    height: 50px;
+//    color: white;
+//    text-align: center;
+//    line-height: 50px;
+//    font-size: 24px;
+//     font-family: 'Roboto', sans-serif;
+//     border-radius: 100%;
+//    background-color: red;
+//    z-index: 1;
+// }
 
-.item.active {
-    background-color: blue;
-}
+// .item.active {
+//     background-color: blue;
+// }
 
 .wrapper svg {
     height: 300px;
@@ -160,8 +219,19 @@ svg {
     stroke-miterlimit: 1;
 }
 
+.st1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .start {
     position: absolute;
     top: 50%;
     right: -30px;
+}
+
+.desc {
+    margin-bottom: 4rem;
+    text-align: center;
 }

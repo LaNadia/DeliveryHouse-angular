@@ -1,67 +1,54 @@
+<!-- with library -->
 <ng-container *ngIf="images as images">
     <div
         *appCarousel="let image of images; let next = next; let back = back"
         class="roundCarousel__wrapper"
+        [@enter]="direction"
     >
-        <button class="button" (click)="back()">
-            <svg class="left">
-                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
-            </svg>
-        </button>
-
-        <p class="roundCarousel__description">{{ image.desc }}</p>
-
-        <!-- <div class="roundCarousel__product-wrapper"> -->
-        <!-- <div id="slider" class="slider"></div> -->
-
-        <div #container class="container">
-            <div #wrapper class="wrapper">
-                <div class="item 1 active">1</div>
-                <div class="item 2">2</div>
-                <div class="item 3">3</div>
-                <div class="item 4">4</div>
-                <div class="item 5">5</div>
-                <div class="item 6">6</div>
-                <div class="item 7">7</div>
-                <div class="item 8">8</div>
-                <svg #svg viewBox="0 0 300 300">
-                    <circle #holder cx="151" cy="151" r="150" class="st0" />
+        <div style="--bg: url({{ image.background }})" class="roundCarousel__bg"></div>
+        <div class="roundCarousel__product">
+            <button #prev class="button" (click)="leftFunc(); back()">
+                <svg class="left">
+                    <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
                 </svg>
-            </div>
-            <div class="start">&#8592; Active</div>
-        </div>
-        <div style="text-align: center" class="container">
-            <button #prev>Prev</button>
-            <button #next>Next</button>
-        </div>
+            </button>
+            <button #next class="button" (click)="rightFunc(); next()">
+                <svg class="right svg">
+                    <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
+                </svg>
+            </button>
 
-        <img alt="Product photo" class="roundCarousel__product" [@div] [src]="image.url" />
-        <!-- </div> -->
-        <button class="button" (click)="next()">
-            <svg class="right svg">
-                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
-            </svg>
-        </button>
+            <p class="roundCarousel__description">{{ image.desc }}</p>
+
+            <img alt="Product photo" class="image" [@firstEnter] [src]="image.url" />
+            <div></div>
+            <!-- <button class="button" #next (click)="rightFunc(); next()" >
+              <svg class="right svg">
+                  <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
+              </svg>
+          </button> -->
+        </div>
     </div>
 </ng-container>
-<!-- 
-<div #container class="container">
-    <div #wrapper class="wrapper">
-      <div class="item 1 active">1</div>
-      <div class="item 2">2</div>
-      <div class="item 3">3</div>
-      <div class="item 4">4</div>
-      <div class="item 5">5</div>
-      <div class="item 6">6</div>
-      <div class="item 7">7</div>
-      <div class="item 8">8</div>
-      <svg #svg viewBox="0 0 300 300">
-        <circle #holder class="st0" cx="151" cy="151" r="150"/>
-      </svg>
+
+<!-- ------------------- картинки + полукруг сверху -->
+<!-- <div #container class="roundCarousel__wrapper" *ngIf="images as images">
+    <div #wrapper class="wrapper roundCarousel__product-wrapper">
+        <div class="item" *ngFor="let image of images">
+            <p class="desc">{{ image.desc }}</p>
+                <img [src]="image.url" alt="product">
+        </div>
+        <svg #svg viewBox="0 0 300 300">
+            <circle #holder cx="151" cy="151" r="850" class="st0" />
+        </svg>
+
+        <svg viewBox="0 0 300 300">
+            <circle cx="151" cy="151" r="1150" class="st0 st1" />
+        </svg>
+
     </div>
-    <div class="start">&#8592; Active</div>
-  </div>
-  <div class="container" style="text-align: center;">
+</div>
+<div style="text-align: center" class="container">
     <button #prev>Prev</button>
     <button #next>Next</button>
-  </div> -->
+</div> -->
