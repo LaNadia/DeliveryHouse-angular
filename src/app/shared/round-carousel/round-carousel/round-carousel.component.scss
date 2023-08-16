@@ -23,24 +23,8 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        animation: fade 0.8s forwards;
+        animation: fade 3s forwards;
     }
-    // &__wrapper::before {
-    //     animation: fade 3s forwards;
-    //     content: ' ';
-    //     display: block;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     // opacity: 0.6;
-    //   //  transition:  opacity 3s ease-out;
-    //     background-image: var(--bg);
-    //     background-position: center center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    // }
 
     &__description {
         max-width: 40rem;
@@ -53,7 +37,8 @@
         line-height: 130%;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         grid-column: img;
-        grid-row: 2;
+        z-index: 1;
+        grid-row: 3;
         margin: 0 auto;
     }
 }
@@ -70,39 +55,19 @@
 }
 
 .roundCarousel__product {
-    position: relative;
+    //  position: relative;
     z-index: 1;
-    grid-column: empty-space1 / empty-space2;
+    grid-column: img;
     grid-row: 4;
     min-height: 100vh;
-    // margin: 30% 1rem;
     margin: 0 1rem;
-    // border-radius: 49%;
-    // border-radius: 50% 50% 0 0/100% 100% 0 0;
-    // border: 5px solid red;
-
-    //  border-radius: 50% 50% 0 0/100% 100% 0 0;
-    // border: 4px solid black;
 }
 
-// .rotated-half-circle {
-
-//     border: 4px solid black;
-//     //background: rgba(255, 255, 255, 0.1);
-//     //box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-//     min-height: 100vh;
-//     min-width: 115vh;
-//     border-radius: 50%;
-//     position: fixed;
-//     bottom: -55%;
-//     min-height: 110vh;
-//     right: 20%;
-// }
-
 .button {
-    position: relative;
+    // position: relative;
     z-index: 1;
     background-color: transparent;
+    grid-row: 8;
 }
 
 svg {
@@ -111,21 +76,11 @@ svg {
 }
 
 .left {
-    //     position: relative;
-    // z-index: 1;
-    // position: absolute;
-    // top: 85%;
-    // left: 5%;
     grid-column: arrow-left;
 }
 
 .right {
-    // position: relative;
-    // z-index: 1;
-    top: 0;
-    // position: absolute;
-    // top: 85%;
-    // left: 90%;
+    // top: 0;
     grid-column: arrow-right;
 }
 
@@ -133,28 +88,8 @@ svg {
     .roundCarousel__product {
         position: fixed;
         min-height: 100vh;
-        // margin: 20% 0;
         margin: 16% 0;
     }
-}
-
-// @media screen and (max-width: 420px)  {
-//     .roundCarousel__wrapper {
-//         grid-template-rows: repeat(10, 9.44vh);
-//     }
-// }
-
-.slider {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-
-    grid-column: empty-space1 / empty-space2;
-    grid-row: 3;
-    // min-height: 100vh;
-    //  margin: -5% 5%;
-    //  margin: 0 17%;
-    margin: 0 4rem;
 }
 
 .roundCarousel__product-wrapper {

@@ -7,7 +7,7 @@
     >
         <div style="--bg: url({{ image.background }})" class="roundCarousel__bg"></div>
         <div class="roundCarousel__product">
-            <button #prev class="button" (click)="leftFunc(); back()">
+            <!-- <button #prev class="button" (click)="leftFunc(); back()">
                 <svg class="left">
                     <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
                 </svg>
@@ -18,16 +18,29 @@
                 </svg>
             </button>
 
-            <p class="roundCarousel__description">{{ image.desc }}</p>
+            <p class="roundCarousel__description">{{ image.desc }}</p> -->
 
             <img alt="Product photo" class="image" [@firstEnter] [src]="image.url" />
-            <div></div>
+
             <!-- <button class="button" #next (click)="rightFunc(); next()" >
               <svg class="right svg">
                   <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
               </svg>
           </button> -->
         </div>
+
+        <p class="roundCarousel__description">{{ image.desc }}</p>
+
+        <button #prev class="button left" (click)="leftFunc(); back()">
+            <svg class="svg">
+                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
+            </svg>
+        </button>
+        <button #next class="button right" (click)="rightFunc(); next()">
+            <svg class="svg">
+                <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
+            </svg>
+        </button>
     </div>
 </ng-container>
 
