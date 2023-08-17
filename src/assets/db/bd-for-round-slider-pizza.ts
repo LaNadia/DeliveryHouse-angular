@@ -1,6 +1,6 @@
 import {DBTypes} from 'src/app/shared/round-carousel/types/db-types.types';
 
-export const DBForRoundSlider: DBTypes[] = [
+export const DBForRoundSliderPizza: DBTypes[] = [
     {
         url: 'https://s3-alpha-sig.figma.com/img/8728/2ffd/eee28913ab3db798c19fbb424e4def6d?Expires=1690156800&Signature=qnGaFjm5y5NdwCF9YQs0--0qZZf7xgOogwkf41Px-SO9SULWLjSL3zVPzI8NsDaoLYUpZPk55XZJjQvHTsQHcIOAAr2I~OLdf1FtPE2tJdAjrU2f~Xo6J3iyAt5PBeSBUMgfBbSIMHR3QPAu14IOtKcmEFtcqoT4YlKxNwtmNYmlFbdskKJWHnkyuyA9spjYbFQClitt3pyzR7dI5nzjwjFAbx6etj9OiikJylogLd2rp6LmWtrUc2cbUZgXKPH-gWSZIVTPJlmQpLucKu7HcRrMlFam8X7xYwkdlq01JHtCzS1X5okVggvhVZBvYMHwTmDbyTZYfyrWllaa8NuWKg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
         desc: 'Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken',

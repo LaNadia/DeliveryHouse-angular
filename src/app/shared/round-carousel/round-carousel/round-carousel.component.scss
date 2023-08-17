@@ -84,89 +84,20 @@ svg {
     grid-column: arrow-right;
 }
 
+.burgers {
+    grid-row: 3;
+    min-height: 75vh;
+}
+
+.sushi {
+    grid-row: 4;
+    min-height: 60vh;
+}
+
 @media screen and (max-width: 1150px) {
     .roundCarousel__product {
         position: fixed;
         min-height: 100vh;
         margin: 16% 0;
     }
-}
-
-.roundCarousel__product-wrapper {
-    //  position: relative;
-    // grid-column: empty-space1 / empty-space2;
-
-    //position: absolute;
-
-    min-height: 100vh;
-    margin: 30% 1rem;
-}
-////////////////////////
-///
-.container {
-    position: relative;
-    max-width: 500px;
-    margin: auto;
-}
-
-.wrapper {
-    position: relative;
-
-    top: 1300%;
-    left: 250%;
-    // grid-column: empty-space1 / empty-space2;
-    // grid-row: 4;
-    // min-height: 100vh;
-}
-
-// .item {
-//    width: 50px;
-//    height: 50px;
-//    color: white;
-//    text-align: center;
-//    line-height: 50px;
-//    font-size: 24px;
-//     font-family: 'Roboto', sans-serif;
-//     border-radius: 100%;
-//    background-color: red;
-//    z-index: 1;
-// }
-
-// .item.active {
-//     background-color: blue;
-// }
-
-.wrapper svg {
-    height: 300px;
-    overflow: visible;
-    width: 300px;
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.st0 {
-    fill: none;
-    stroke: #000000;
-    stroke-width: 2;
-    stroke-miterlimit: 1;
-}
-
-.st1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.start {
-    position: absolute;
-    top: 50%;
-    right: -30px;
-}
-
-.desc {
-    margin-bottom: 4rem;
-    text-align: center;
 }

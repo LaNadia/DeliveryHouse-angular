@@ -1,4 +1,7 @@
 <div class="container">
-    <app-round-carousel [images]="images"></app-round-carousel>
-    <app-side-menu class="app-side-menu"></app-side-menu>
+    <app-round-carousel [images]="images" [category]="category"></app-round-carousel>
+    <app-side-menu
+        class="app-side-menu"
+        (changeCategEvent)="changeCarouselDB($event)"
+    ></app-side-menu>
 </div>

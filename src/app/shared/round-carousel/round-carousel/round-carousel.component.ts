@@ -2,7 +2,7 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 /* eslint-disable @typescript-eslint/naming-convention */
 import {Component, Input} from '@angular/core';
-import {animate, query, sequence, state, style, transition, trigger} from '@angular/animations';
+import {animate, query, sequence, style, transition, trigger} from '@angular/animations';
 import {rotateInOnEnterAnimation} from 'angular-animations';
 import {DBTypes} from '../types/db-types.types';
 
@@ -49,10 +49,10 @@ type Direction = 'prev' | 'next' | 'next2' | 'none';
     ],
 })
 export class RoundCarouselComponent {
-    @Input() images: DBTypes[] | null = null;
+    @Input() images: DBTypes[] | [] | null = [];
+    @Input() category = '';
 
     direction: Direction;
-
     bg = false;
 
     constructor() {

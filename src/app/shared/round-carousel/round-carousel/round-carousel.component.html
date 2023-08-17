@@ -6,27 +6,8 @@
         [@enter]="direction"
     >
         <div style="--bg: url({{ image.background }})" class="roundCarousel__bg"></div>
-        <div class="roundCarousel__product">
-            <!-- <button #prev class="button" (click)="leftFunc(); back()">
-                <svg class="left">
-                    <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#left"></use>
-                </svg>
-            </button>
-            <button #next class="button" (click)="rightFunc(); next()">
-                <svg class="right svg">
-                    <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
-                </svg>
-            </button>
-
-            <p class="roundCarousel__description">{{ image.desc }}</p> -->
-
+        <div class="roundCarousel__product" [ngClass]="category">
             <img alt="Product photo" class="image" [@firstEnter] [src]="image.url" />
-
-            <!-- <button class="button" #next (click)="rightFunc(); next()" >
-              <svg class="right svg">
-                  <use href="../../../../assets/svg-sprites/svg-arrows-sprite.svg#right"></use>
-              </svg>
-          </button> -->
         </div>
 
         <p class="roundCarousel__description">{{ image.desc }}</p>
@@ -43,25 +24,3 @@
         </button>
     </div>
 </ng-container>
-
-<!-- ------------------- картинки + полукруг сверху -->
-<!-- <div #container class="roundCarousel__wrapper" *ngIf="images as images">
-    <div #wrapper class="wrapper roundCarousel__product-wrapper">
-        <div class="item" *ngFor="let image of images">
-            <p class="desc">{{ image.desc }}</p>
-                <img [src]="image.url" alt="product">
-        </div>
-        <svg #svg viewBox="0 0 300 300">
-            <circle #holder cx="151" cy="151" r="850" class="st0" />
-        </svg>
-
-        <svg viewBox="0 0 300 300">
-            <circle cx="151" cy="151" r="1150" class="st0 st1" />
-        </svg>
-
-    </div>
-</div>
-<div style="text-align: center" class="container">
-    <button #prev>Prev</button>
-    <button #next>Next</button>
-</div> -->

@@ -1,26 +1,38 @@
 <section>
     <div class="container">
-        <div class="side-menu__item">
+        <div
+            class="side-menu__item"
+            [ngClass]="category == 'pizza' ? 'active' : ''"
+            (click)="changeCategory('pizza')"
+        >
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#pizza"></use>
             </svg>
         </div>
-        <div class="side-menu__item">
+        <a
+            class="side-menu__item"
+            [ngClass]="category == 'sushi' ? 'active' : ''"
+            (click)="changeCategory('sushi')"
+        >
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#sushi"></use>
             </svg>
-        </div>
-        <div class="side-menu__item">
+        </a>
+        <div
+            class="side-menu__item"
+            [ngClass]="category == 'burgers' ? 'active' : ''"
+            (click)="changeCategory('burgers')"
+        >
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#burger"></use>
             </svg>
         </div>
-        <div class="side-menu__item">
+        <div class="side-menu__item" [ngClass]="category == 'noodles' ? 'active' : ''">
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#noodles"></use>
             </svg>
         </div>
-        <div class="side-menu__item">
+        <div class="side-menu__item" [ngClass]="category == 'barbecue' ? 'active' : ''">
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#barbecue"></use>
             </svg>
