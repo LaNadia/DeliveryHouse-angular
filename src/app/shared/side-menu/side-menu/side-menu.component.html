@@ -27,12 +27,20 @@
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#burger"></use>
             </svg>
         </div>
-        <div class="side-menu__item" [ngClass]="category == 'noodles' ? 'active' : ''">
+        <div
+            class="side-menu__item"
+            [ngClass]="category == 'wok' ? 'active' : ''"
+            (click)="changeCategory('wok')"
+        >
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#noodles"></use>
             </svg>
         </div>
-        <div class="side-menu__item" [ngClass]="category == 'barbecue' ? 'active' : ''">
+        <div
+            class="side-menu__item"
+            [ngClass]="category == 'barbecue' ? 'active' : ''"
+            (click)="changeCategory('barbecue')"
+        >
             <svg>
                 <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#barbecue"></use>
             </svg>
