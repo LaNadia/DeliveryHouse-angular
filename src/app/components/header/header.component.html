@@ -1,12 +1,14 @@
 <div class="header__wrapper">
-    <div class="header__logo">
+    <div class="header__logo" [routerLink]="['/']">
         <img src="../../../assets//images/logo.png" alt="logo" />
         <h3>Delivery House</h3>
     </div>
 
     <nav class="header__menu-wrapper">
         <ul class="menu">
-            <li>Home</li>
+            <li>
+                <a [routerLink]="['/']">Home</a>
+            </li>
             <li>Full Menu</li>
             <li>
                 <a [routerLink]="['/categories', 'pizza']">Categories</a>

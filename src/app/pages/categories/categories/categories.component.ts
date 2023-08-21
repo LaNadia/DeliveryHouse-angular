@@ -38,8 +38,8 @@ export class CategoriesComponent {
                 this.router.navigate(['/categories', 'wok']);
                 this.images = [...DBForRoundSliderWok];
                 break;
-            case 'barbecue':
-                this.router.navigate(['/categories', 'barbecue']);
+            case 'barbeque':
+                this.router.navigate(['/categories', 'barbeque']);
                 this.images = [...DBForRoundSliderBarbeque];
                 break;
             default:
