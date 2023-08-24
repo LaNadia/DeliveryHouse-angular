@@ -1,10 +1,12 @@
 <div class="swiper__wrapper">
-    <div class="swiper">
-        <button class="arrow left"></button>
-        <img
-            src="../../../assets/images/swiper-images/beef-cheeseburger-1.jpg"
-            alt="Try out our meals!"
-        />
-        <button class="arrow right"></button>
+    <div *ngIf="images as images" class="swiper">
+        <div
+            *appCarousel="let image of images; let next = next; let back = back"
+            [@enter]="direction"
+        >
+            <button class="arrow left" (click)="leftFunc(); back()"></button>
+            <img alt="Try out our meals!" class="image" [src]="image.url" />
+            <button appAutoSwipe class="arrow right" (click)="rightFunc(); next()"></button>
+        </div>
     </div>
 </div>
