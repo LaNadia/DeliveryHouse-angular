@@ -1,0 +1,35 @@
+<ng-container *ngIf="card">
+    <div class="card__wrapper">
+        <div class="card">
+            <div class="card__header">
+                <svg class="svg">
+                    <use
+                        href="../../../../assets/svg-sprites/svg-product-card-sprite.svg#like"
+                    ></use>
+                </svg>
+            </div>
+            <div class="card__content">
+                <img alt="{{ card.strMeal }}" [src]="card.strMealThumb" />
+                <div class="card__content-inner">
+                    <div>
+                        <ul class="card__rating">
+                            <li *ngFor="let x of rating">
+                                <span value="x" class="material-symbols-outlined">star</span>
+                            </li>
+                        </ul>
+                        <p>{{ card.strMeal }}</p>
+                        <p>
+                            <span class="yellow">$</span>
+                            5.59
+                        </p>
+                    </div>
+                    <svg class="svg">
+                        <use
+                            href="../../../../assets/svg-sprites/svg-product-card-sprite.svg#adbutton"
+                        ></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

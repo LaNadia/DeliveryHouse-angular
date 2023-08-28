@@ -1,0 +1,103 @@
+.roundCarousel {
+    &__wrapper {
+        display: grid;
+        font-family: 'Poppins', sans-serif;
+        grid-template-rows: repeat(9, 9.44vh);
+        grid-template-columns: [arrow-left] 25rem [empty-space1] 3rem [img] minmax(12rem, 1fr) [empty-space2] 3rem [arrow-right] 25rem;
+        //  background: url('../../../../assets/images//bg-table.jpg');
+        // background-image: var(--bg);
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // animation: fade 3s forwards;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        background-image: var(--bg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: fade 3s forwards;
+    }
+
+    &__description {
+        max-width: 40rem;
+        color: white;
+        text-align: center;
+        font-family: Playfair Display;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        grid-column: img;
+        z-index: 1;
+        grid-row: 3;
+        margin: 0 auto;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.roundCarousel__product {
+    //  position: relative;
+    z-index: 1;
+    grid-column: img;
+    grid-row: 4;
+    min-height: 100vh;
+    margin: 0 1rem;
+}
+
+.button {
+    // position: relative;
+    z-index: 1;
+    background-color: transparent;
+    grid-row: 8;
+}
+
+svg {
+    height: 7rem;
+    width: 7rem;
+}
+
+.left {
+    grid-column: arrow-left;
+}
+
+.right {
+    // top: 0;
+    grid-column: arrow-right;
+}
+
+.burgers {
+    grid-row: 3;
+    min-height: 75vh;
+}
+
+.sushi {
+    grid-row: 4;
+    min-height: 60vh;
+}
+
+@media screen and (max-width: 1150px) {
+    .roundCarousel__product {
+        position: fixed;
+        min-height: 100vh;
+        margin: 16% 0;
+    }
+}
