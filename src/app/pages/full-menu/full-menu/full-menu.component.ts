@@ -9,7 +9,7 @@ import {ProductInterface} from '../types/product.interface';
     styleUrls: ['./full-menu.component.scss'],
 })
 export class FullMenuComponent implements OnInit {
-    products: ProductInterface | [] = [];
+    products: ProductInterface[] | [] = [];
 
     constructor(private readonly fullMenuService: FullMenuService) {}
 
