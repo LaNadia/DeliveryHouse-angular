@@ -10,6 +10,11 @@ const routes: Routes = [
         loadChildren: () =>
             import('./pages/categories/categories.module').then(m => m.CategoriesModule),
     },
+    {
+        path: 'fullmenu',
+        loadChildren: () =>
+            import('./pages/full-menu/full-menu.module').then(m => m.FullMenuModule),
+    },
     {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 
