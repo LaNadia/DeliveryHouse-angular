@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FullMenuService} from '../services/full-menu-service.service';
 import {CategoryInterface} from '../types/category.interface';
 import {ProductInterface} from '../types/product.interface';
+import {SideMenuCategoryDB} from '../../categories/db/db-categories-side-menu';
 
 @Component({
     selector: 'app-full-menu',
@@ -10,6 +11,7 @@ import {ProductInterface} from '../types/product.interface';
 })
 export class FullMenuComponent implements OnInit {
     products: ProductInterface[] | [] = [];
+    categoriesData = SideMenuCategoryDB;
 
     constructor(private readonly fullMenuService: FullMenuService) {}
 

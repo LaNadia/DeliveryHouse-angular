@@ -2,6 +2,7 @@
     <app-round-carousel [images]="images" [category]="category"></app-round-carousel>
     <app-side-menu
         class="app-side-menu"
+        [categoriesData]="categoriesData"
         (changeCategEvent)="changeCarouselDB($event)"
     ></app-side-menu>
 </div>

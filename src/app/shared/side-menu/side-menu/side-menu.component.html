@@ -1,48 +1,17 @@
 <section>
-    <div class="container">
+    <div *ngIf="categoriesData" class="container">
         <div
+            *ngFor="let cat of categoriesData"
             class="side-menu__item"
-            [ngClass]="category == 'pizza' ? 'active' : ''"
-            (click)="changeCategory('pizza')"
+            [ngClass]="category == cat.category ? 'active' : ''"
+            (click)="changeCategory(cat.category)"
         >
             <svg>
-                <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#pizza"></use>
-            </svg>
-        </div>
-        <a
-            class="side-menu__item"
-            [ngClass]="category == 'sushi' ? 'active' : ''"
-            (click)="changeCategory('sushi')"
-        >
-            <svg>
-                <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#sushi"></use>
-            </svg>
-        </a>
-        <div
-            class="side-menu__item"
-            [ngClass]="category == 'burgers' ? 'active' : ''"
-            (click)="changeCategory('burgers')"
-        >
-            <svg>
-                <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#burger"></use>
-            </svg>
-        </div>
-        <div
-            class="side-menu__item"
-            [ngClass]="category == 'wok' ? 'active' : ''"
-            (click)="changeCategory('wok')"
-        >
-            <svg>
-                <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#noodles"></use>
-            </svg>
-        </div>
-        <div
-            class="side-menu__item"
-            [ngClass]="category == 'barbeque' ? 'active' : ''"
-            (click)="changeCategory('barbeque')"
-        >
-            <svg>
-                <use href="../../../assets/svg-sprites/svg-side-menu-sprite.svg#barbecue"></use>
+                <use
+                    [attr.href]="
+                        ['./../../assets/svg-sprites/svg-side-menu-sprite.svg#'] + cat.category
+                    "
+                ></use>
             </svg>
         </div>
     </div>

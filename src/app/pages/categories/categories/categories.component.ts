@@ -6,6 +6,7 @@ import {DBForRoundSliderBurgers} from 'src/assets/db/bd-for-round-slider-burgers
 import {DBForRoundSliderPizza} from 'src/assets/db/bd-for-round-slider-pizza';
 import {DBForRoundSliderSushi} from 'src/assets/db/bd-for-round-slider-sushi';
 import {DBForRoundSliderWok} from 'src/assets/db/bd-for-round-slider-wok';
+import {SideMenuCategoryDB} from '../db/db-categories-side-menu';
 
 @Component({
     selector: 'app-gallery',
@@ -15,7 +16,7 @@ import {DBForRoundSliderWok} from 'src/assets/db/bd-for-round-slider-wok';
 export class CategoriesComponent {
     images: DBTypes[] | null = null;
     category = '';
-
+    categoriesData = SideMenuCategoryDB;
     constructor(private readonly router: Router) {}
 
     changeCarouselDB(value: string) {
